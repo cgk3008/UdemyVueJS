@@ -8,6 +8,7 @@ namespace UdemyVueJS.Models
 {
     public class Helpers
     {
+
         public static IHtmlString LoadFile(string webpath)
         {
             HtmlString returnContent = new HtmlString("");
@@ -27,6 +28,5 @@ namespace UdemyVueJS.Models
             }
             return returnContent;
         }
-
     }
 }
