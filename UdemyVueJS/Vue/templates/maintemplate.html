@@ -14,11 +14,7 @@
     <br />
 
     <comp1 v-bind:foo="firstName"></comp1>
-
-
-
 </div>
-
 
 <div id="app">
 
@@ -29,36 +25,53 @@
             <input type="text" v-model="inputName">
             <button @click="addNameToList">ADD</button>
         </div>
+        <br />
         <div class="error_label" v-if="showError">
             Please enter a name!!!!
         </div>
-        <div class="btn-success" >
-            <div
-                 
-                 v-for="(name, index) in names" 
-                 :key="index"
-                 @click="removeName"
-                 >
-               {{ name }}
-            </div>
+        <div class="input_container">
+            <button class="container1" v-for="(name, index) in names"
+                    :key="index"
+                    @click="removeName">
+
+                {{ name }}
+            </button>
         </div>
         <div v-if="names.length > 1">
-            <div class="btn-warning"
-                 @click="showResults(index)">
+            <br />
+            <button class="btn-warning"
+                    @click="showResults(index)">
                 Check the loser
-            </div>
+            </button>
+            <br />
         </div>
     </div>
 
     <div id="result" class="container" v-if="!state">
         <div class="result_container">
             <h1>The loser is: </h1>
-            <div class="label-danger"> {{ result }} </div>
-            <div class="btn-default" @click="resetApp">
-                Start again!
+            <br />
+            <div class="label-danger">
+
+                {{ result }}
             </div>
+            <br />
+            <button class="btn-default" @click="resetApp">
+                Start again!
+            </button>
         </div>
-
-
     </div>
 </div>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .container1 {
+        min-height: 4vh;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+</style>
