@@ -1,9 +1,7 @@
-﻿<!--Template-->
-
-<div id="app">
+﻿<div id="app">
 
     <div>
-      
+        <app-header />
         <div class="container">
             <form>
                 <div class="row">
@@ -92,7 +90,7 @@
                 </div>
             </form>
         </div>
-       
+        <app-footer />
     </div>
 </div>
 <style>

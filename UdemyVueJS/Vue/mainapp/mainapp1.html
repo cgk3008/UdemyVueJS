@@ -1,15 +1,7 @@
 ﻿<!--Main View application-->
 
 <script>
-    var mainVue = new Vue({
-        el: '#vueapp',
-
-        components: ['comp1']
-        ,
-        data: {
-            firstName: 'Modify this text',
-        },
-    });
+  
 
     new Vue({
         el: "#app",
@@ -17,49 +9,27 @@
         components: ['comp2'],
 
         data: {
-            state: true,
-            inputName: "",
-            names: [],
-            showError: false,
-            result: '',
+            countries: [
+                'EEUU',
+                'India',
+                'UK',
+                'Russia'
+            ],
+            formdata: {
+                name: '',
+                lastname: '',
+                subject: '',
+                message: 'Some default content',
+                extras: [],
+                gender: 'alien',
+                country: 'India'
+            }
 
         },
         methods: {
-            addNameToList() {
-                console.log(this.names)
-
-                if (this.validate(this.inputName)) {
-                    //console.log("it's valid")
-
-                    this.names.push(this.inputName);
-                    this.inputName = "";
-                    this.showError = false;
-                } else {
-                    this.showError = true;
-
-                    // console.log("not valid")
-                }
-            },
-            validate(value) {
-                if (value !== '') {
-                    return true;
-                } else {
-                    return false;
-                }
-            },
-            showResults() {
-                let rand = this.names[Math.floor(Math.random() * this.names.length)]
-                this.result = rand;
-                this.state = false;
-            },
-            resetApp() {
-                this.state = true;
-                this.names = [];
-                this.result = '';
-            },
-            removeName(index) {
-                //the "(index,1)  just removes one name
-                this.names.splice(index, 1);
+            submitForm() {
+                console.log(this.formdata);
+                console.log(JSON.stringify(this.formdata))
             }
         }
     });
