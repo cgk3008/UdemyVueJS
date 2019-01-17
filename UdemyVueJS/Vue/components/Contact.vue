@@ -1,7 +1,7 @@
-﻿<div id="app">
+﻿<template id="comp1-template">
 
     <div>
-        <app-header />
+
         <div class="container">
             <form>
                 <div class="row">
@@ -90,9 +90,9 @@
                 </div>
             </form>
         </div>
-        <app-footer />
     </div>
-</div>
+</template>
+
 <style>
     body {
         padding: 0;

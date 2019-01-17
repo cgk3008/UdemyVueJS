@@ -221,6 +221,7 @@
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Scripts\vue.js" />
     <Content Include="Vue\components\comp1.html" />
+    <Content Include="Vue\main.js" />
     <Content Include="Vue\mainapp\mainapp1.html" />
     <Content Include="Vue\templates\comp1-template.html" />
     <Content Include="Vue\templates\maintemplate.html" />
@@ -248,6 +249,7 @@
     <Content Include="Vue\components\Contact.vue" />
     <Content Include="Vue\components\Home.vue" />
     <Content Include="Vue\components\Page.vue" />
+    <Content Include="Vue\App.vue" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

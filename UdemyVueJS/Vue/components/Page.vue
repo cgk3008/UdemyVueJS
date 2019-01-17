@@ -3,3 +3,6 @@
         Page
     </div>
 </template>
+
+<script>
+</script>
