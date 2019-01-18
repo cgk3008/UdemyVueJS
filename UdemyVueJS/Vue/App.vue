@@ -1,50 +1,44 @@
 <template>
     <div>
-        <app-header/>
+        <app-header />
         <div class="container">
             <div>
                 <button @click="compToRender = 'compHome'">Home</button>
                 <button @click="compToRender = 'compContact'">Contact</button>
                 <button @click="compToRender = 'compPage'">Page</button>
             </div>
-
             <keep-alive>
                 <component :is="compToRender"></component>
             </keep-alive>
-            
-
-
         </div>
-        <app-footer/>
+        <app-footer />
     </div>
 </template>
-
 <script>
 
-    import compContact from './Components/Contact.vue';
-    import compHome from './Components/Home.vue';
-    import compPage from './Components/Page.vue';
+    import compContact from './components/Contact.vue';
+    import compHome from './components/Home.vue';
+    import compPage from './components/Page.vue';
 
     export default {
-        data(){
+        data() {
             return {
-                compToRender:'compContact'
+                compToRender: 'compContact'
             }
         },
-        components:{
+        components: {
             compContact,
             compHome,
             compPage
         }
     }
-        
 </script>
 
-
 <style>
+
     body {
-        padding:0;
-        margin:0;
+        padding: 0;
+        margin: 0;
         font-family: 'Roboto', sans-serif;
     }
 
@@ -53,7 +47,4 @@
         box-sizing: border-box;
         padding: 20px;
     }
-
-
-
 </style>
